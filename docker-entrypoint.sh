@@ -13,7 +13,7 @@ if [ ! "$MMS_API_KEY" ] || [ ! "$MMS_GROUP_ID" ]; then
 fi
 
 config_tmp="$(mktemp)"
-cat /etc/mongodb-mms/monitoring-agent.config > "$config_tmp"
+cat /etc/mongodb-mms/automation-agent.config > "$config_tmp"
 
 set_config() {
     key="$1"
@@ -26,7 +26,7 @@ set_config mmsApiKey "$MMS_API_KEY"
 
 set_config mmsGroupId "$MMS_GROUP_ID"
 
-cat "$config_tmp" > /etc/mongodb-mms/monitoring-agent.config
+cat "$config_tmp" > /etc/mongodb-mms/automation-agent.config
 rm "$config_tmp"
 
 # Setup munin-node
