@@ -12,7 +12,7 @@ RUN apt-get -qqy update \
  && apt-get -qqy install supervisor \
  && apt-get -qqy install munin-node \
  && apt-get -qqy install libsasl2-2 \
- && curl -sSL https://cloud.mongodb.com/download/agent/automation/mongodb-mms-automation-agent-manager_${MMS_VERSION}_ppc64el.ubuntu1604.deb -o mms.deb \
+ && curl -sSL https://cloud.mongodb.com/download/agent/automation/mongodb-mms-automation-agent-manager_${MMS_VERSION}_amd64.ubuntu1604.deb -o mms.deb \
  && dpkg -i mms.deb \
  && rm mms.deb \
  && apt-get -qqy autoremove \
