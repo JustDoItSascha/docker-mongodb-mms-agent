@@ -3,7 +3,7 @@ FROM ubuntu:16.04
 # Set envs
 ENV DEBIAN_FRONTEND noninteractive
 ENV DEBCONF_NONINTERACTIVE_SEEN true
-ENV MMS_VERSION 10.7.0.6016-1
+ENV MMS_VERSION 10.7.1.6018-1
 
 RUN apt-get -qqy update \
  && apt-get -qqy upgrade \
