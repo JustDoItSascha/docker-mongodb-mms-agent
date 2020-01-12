@@ -40,3 +40,5 @@ cat "$config_tmp" > /etc/munin/munin-node.conf
 rm "$config_tmp"
 
 exec "$@"
+
+/opt/mongodb-mms-automation/bin/mongodb-mms-automation-agent -f /etc/mongodb-mms/automation-agent.config
