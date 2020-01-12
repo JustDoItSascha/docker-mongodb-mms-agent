@@ -39,4 +39,6 @@ echo $(ip route get 8.8.8.8|head -n 1 |awk '{print "allow ^"$7"$"}'|sed 's@\.@\\
 cat "$config_tmp" > /etc/munin/munin-node.conf
 rm "$config_tmp"
 
+/opt/mongodb-mms-automation/bin/mongodb-mms-automation-agent -f /etc/mongodb-mms/automation-agent.config
+
 exec "$@"
