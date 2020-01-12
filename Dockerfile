@@ -29,4 +29,4 @@ ADD supervisor /etc/supervisor
 ADD docker-entrypoint.sh /
 ENTRYPOINT ["/docker-entrypoint.sh"]
 
-CMD ["/opt/mongodb-mms-automation/bin/mongodb-mms-automation-agent", "-f", "/etc/mongodb-mms/automation-agent.config"]
+CMD ["tail", "-f", "/var/log/mongodb-mms-automation/automation-agent.log"]
